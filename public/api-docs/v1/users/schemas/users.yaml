@@ -1,0 +1,56 @@
+Users:
+  type: object
+  properties:
+    id:
+      type: integer
+      description: ID of user
+      example: 1
+    email:
+      type: string
+      description: Email of user
+      example: "sb200308@gmail.com"
+    nickname:
+      type: string
+      description: Nickname of user
+      example: "Vsevolod"
+    updated_at:
+      description: "Update date"
+      format: date-time
+      type: string
+      example: "2024-04-04T11:57:28.000000Z"
+    created_at:
+      description: "Creation date"
+      format: date-time
+      type: string
+      example: "2024-04-04T11:57:28.000000Z"
+  required:
+    - id
+    - email
+    - nickname
+    - updated_at
+    - created_at
+
+UsersResponse:
+  type: object
+  properties:
+    data:
+      $ref: '#/Users'
+    meta:
+      type: object
+  required:
+    - data
+
+CreateUsersRequest:
+  type: object
+  properties:
+    email:
+      type: string
+      description: Email of user
+      example: "sb200308@gmail.com"
+    nickname:
+      type: string
+      description: Nickname of user
+      example: "Vsevolod"
+  required:
+    - email
+    - nickname

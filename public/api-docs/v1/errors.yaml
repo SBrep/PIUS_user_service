@@ -26,7 +26,7 @@ ErrorResponse:
       description: Массив ошибок
       items:
         $ref: '#/Error'
-    meta: 
+    meta:
       type: object
       description: Объект с мета-информацией
   required:
